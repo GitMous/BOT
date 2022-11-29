@@ -19,7 +19,7 @@ client.on('interactionCreate', async interaction => {
         await interaction.reply(langs.porco[interaction.locale] ?? 'God !');
     } else if (commandName === 'botInfo') {
         const Embed2 = new EmbedBuilder()
-        .setTitle(langs.server[interaction.locale] ?? 'Info Server')
+        .setTitle(langs.server[interaction.locale] ?? 'Info Bot')
         .setFields([
             {
                 name : "🏷️BotName",

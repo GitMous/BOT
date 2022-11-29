@@ -13,6 +13,7 @@ const comandi = [
     new SlashCommandBuilder().setName('stop').setDescription('stoppa la riproduzione'),
     new SlashCommandBuilder().setName('queque').setDescription('vedi la lista delle canzoni'),
     new SlashCommandBuilder().setName('skip').setDescription('passa alla traccia successiva'),
+    new SlashCommandBuilder().setName('BotInfo').setDescription('vedi ifno del bot'), 
 ].map(comandi => comandi.toJSON());
 
 const rest = new REST({ version: '10' }).setToken(token);

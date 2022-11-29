@@ -17,7 +17,27 @@ client.on('interactionCreate', async interaction => {
 
     if (commandName === 'porco') {
         await interaction.reply(langs.porco[interaction.locale] ?? 'God !');
-    } else if (commandName === 'server') {
+    } else if (commandName === 'botInfo') {
+        const Embed2 = new EmbedBuilder()
+        .setTitle(langs.server[interaction.locale] ?? 'Info Server')
+        .setFields([
+            {
+                name : "🏷️BotName",
+                value: "BOTschool"
+            },
+            {
+                name : "🆔Server",
+                value: interaction.guild.id
+            },
+            {
+                name : "👑Owner",
+                value: `<@${interaction.guild.ownerId}>`
+            }
+        ])
+        await interaction.reply({
+            embeds : [Embed2]
+        })
+    }else if (commandName === 'server') {
         const Embed = new EmbedBuilder()
         .setTitle(langs.server[interaction.locale] ?? 'Info Server')
         .setThumbnail(interaction.guild.iconURL())
@@ -256,7 +276,6 @@ player.on('channelEmpty', (queue) => {
 player.on('queueEnd', (queue) => {
   queue.metadata.send('All play queue finished, I think you can listen to some more music. ✅');
 });
-
 
 
 

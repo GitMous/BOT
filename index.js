@@ -219,7 +219,7 @@ client.on("guildMemberAdd", async member => {
 
 
 client.on('ready', () => {
-	client.user.setActivity({ name: `/help`, type: ActivityType.Playing })
+	client.user.setActivity({ name: `VisualStudioCode`, type: ActivityType.Playing })
 })
 
 // Musica

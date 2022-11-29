@@ -27,7 +27,7 @@ client.on('interactionCreate', async interaction => {
                 value: interaction.guild.name
             },
             {
-                name : "🆔ServerId",
+                name : "🆔Server",
                 value: interaction.guild.id
             },
             {
@@ -214,7 +214,7 @@ client.on("guildMemberAdd", async member => {
     .setThumbnail(member.displayAvatarURL())
     .setFooter({ text: member.guild.name, iconURL: member.guild.iconURL() })
     .setColor('Random')
-  client.channels.cache.get('1046413994640031785').send({ embeds: [embedWelc] })
+  client.channels.cache.get('1046865356599332957').send({ embeds: [embedWelc] })
 })
 
 
